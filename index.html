@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CS 109: Probability and Statistics</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="markov.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.3/d3-tip.min.js"></script>
+    <script src="Model.js"></script>
+    <script src="TableView.js"></script>
+    <script src="ChartView.js"></script>
+    <script src="Controller.js"></script>
+    <script src="app.js"></script>
+</head>
+<body class="container-fluid">
+    <h1>CS 109 Markov Inequality</h1>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="table-responsive">
+                <table id="markov-table" class="table table-condensed table-hover">
+                    <thead>
+                        <th scope="col">Outcomes (<i class="math">a</i>)</th>
+                        <th scope="col" class="num-input-col">Occurrences</th>
+                        <th scope="col">PMF <i class="math">P(X = a)</i></th>
+                        <th scope="col"><i class="math">x * p(x)</i></th>
+                        <th scope="col">Markov upper bound</th>
+                        <th scope="col">Actual <i class="math">P(X >= a)</i></th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <p class="calculation"><i class="math">E[X] = <span id="expected-value"></span></i></p>
+        </div>
+        <div class="col-md-5">
+            <svg id="markov-chart"></svg>
+        </div>
+    </div>
+</body>
+</html>
